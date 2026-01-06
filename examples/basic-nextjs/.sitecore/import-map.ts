@@ -6,10 +6,9 @@ import { combineImportEntries, defaultImportEntries } from '@sitecore-content-sd
 import { useEffect } from 'react';
 import React from 'react';
 import componentMap from '.sitecore/component-map';
-import Placeholder from 'components/content-sdk/Placeholder';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
-import { Placeholder as Placeholder_8a80e63291fea86e0744df19113dc44bec187216, ServerPlaceholder, CdpHelper, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { Placeholder as Placeholder_8a80e63291fea86e0744df19113dc44bec187216, CdpHelper, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { rsc } from 'rsc-env';
 import { pageView } from '@sitecore-cloudsdk/events/browser';
 import config from 'sitecore.config';
@@ -29,12 +28,6 @@ const importMap = [
     ]
   },
   {
-    module: 'components/content-sdk/Placeholder',
-    exports: [
-      { name: 'default', value: Placeholder },
-    ]
-  },
-  {
     module: 'next/head',
     exports: [
       { name: 'default', value: Head },
@@ -50,7 +43,6 @@ const importMap = [
     module: '@sitecore-content-sdk/nextjs',
     exports: [
       { name: 'Placeholder', value: Placeholder_8a80e63291fea86e0744df19113dc44bec187216 },
-      { name: 'ServerPlaceholder', value: ServerPlaceholder },
       { name: 'CdpHelper', value: CdpHelper },
       { name: 'useSitecore', value: useSitecore },
     ]

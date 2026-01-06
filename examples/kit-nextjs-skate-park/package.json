@@ -34,6 +34,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@sitecore-content-sdk/cli": "^1.0.0",
+    "@sitecore-jss/sitecore-jss-cli": "^22.10.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^22.15.14",
     "@types/react": "^19.1.10",
@@ -47,6 +48,7 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production npm-run-all --serial sitecore-tools:generate-map sitecore-tools:build next:build",
+    "jss": "jss",
     "lint": "eslint ./src/**/*.tsx ./src/**/*.ts",
     "next:build": "next build",
     "next:dev": "cross-env NODE_OPTIONS='--inspect' next dev",
